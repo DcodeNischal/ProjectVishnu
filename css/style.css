@@ -1,8 +1,20 @@
 /* Body */
 
+/* Create primary secondary color variables */
+
+:root {
+  --primary-color: #1E2A3A;
+  --secondary-color: #34D399;
+  --button-color:#FFA500;
+  --alert-color: #FF4136;
+  --neutral-color: #FFFFFF;
+  --neutral-text-color:#808080;
+}
+
 body {
-  background-color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--neutral-color);
+  font-family: 'VT323', sans-serif;
+
 }
 
 * {
@@ -11,23 +23,16 @@ body {
 }
 
 nav{
-    background-color: #34D399;
+    background-color:var(--secondary-color);
     height: 80px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
-    position: fixed;
+    position: absolute;
     top: 0;
     z-index: 100;
-}
-
-nav .logo{
-    color: white;
-    font-size: 30px;
-    font-weight: 600;
-    text-decoration: none;
 }
 
 nav .logo img{
@@ -47,36 +52,151 @@ nav ul li{
 }
 
 nav ul li a{
-    display: block;
-    color: white;
+    display: inline-block;
+    color: var(--neutral-color);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     transition: .3s ease-in-out;
     margin: 0px 10px;
+    position: relative;
+    font-size: 20px;
 }
 
-nav ul li a:hover{
-    background-color: #4EEA8A;
-    transition: .3s ease-in-out;
+nav ul li a::after{
+    content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--neutral-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+nav ul li a:hover::after{
+    transform: scaleX(1);
+    transform-origin:bottom left ;
+}
+
+.active-list::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 nav .logout button{
-    background-color: #fff;
+    background-color: var(--neutral-color);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    color: #34D399;
+    color: var(--secondary-color);
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
     transition: .3s ease-in-out;
-    border: #34D399 solid 1px;
+    border: var(--secondary-color) solid 1px;
+    font-family: 'VT323', sans-serif;
 }
 
 nav .logout button:hover{
-    background-color: #34D399;
-    color: #fff;
-    border: #fff solid 1px;
+    background-color: var(--secondary-color);
+    color: var(--neutral-color);
+    border: var(--neutral-color) solid 1px;
     transition: .3s ease-in-out;
 }
+
+.inner-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+    margin-top: 80px;
+    flex-direction: column;
+}
+
+.title{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.page-title{
+    font-weight: 100;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.programs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 5%;
+    width: 100%;
+}
+
+/* display only 3 items in each row and others in next row */
+.programs .program:nth-child(3n+1){
+    margin-left: 0;
+}
+
+
+
+.programs a{
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 1%;
+}
+
+.programs .program{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--secondary-color) solid 1px;
+    flex-direction: column;
+    height: 400px;
+    width: 100%;
+}
+
+
+
+.programs .program .image{
+    background-color: var(--secondary-color);
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.programs .program .image img{
+    width: 100px;
+    border-radius: 50%;
+    border: var(--primary-color) solid 1px;
+}
+
+.programs .program .description{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    height: 50%;
+    justify-content: center;
+    background-color: --;
+}
+
+.programs .program .description .program-name{
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.programs .program .description .program-description{
+    font-size: 20px;
+    font-weight: 100;
+}
+
