@@ -23,8 +23,6 @@ include_once("config.php");
         <input type="number" name="minimum" value="0">
         <input type="number" name="maximum" value="0">
         <input type="text" name="description" placeholder="Enter description">
-        
-
     </form>
 </body>
 </html>
