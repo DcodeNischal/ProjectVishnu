@@ -15,3 +15,6 @@ Provides simplicity, cleanliness, and a sense of spaciousness. It helps make oth
 
 Neutral Text: Grey (#808080)
 Offers a balanced and sophisticated text color that complements the primary and secondary colors.
+
+Text Font style
+font-family: 'VT323', sans-serif;
