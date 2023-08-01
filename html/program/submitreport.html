@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit Report</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=VT323"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img
+          src="../../assets/logo/Project Vishnu 3.png"
+          alt="Project Vishnu - securing digital himalayas"
+        />
+      </div>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Programs</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Hacktivity</a></li>
+        <li><a href="#">Leaderboard</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+      <div class="logout">
+        <a href="#"><button>Logout</button></a>
+      </div>
+    </nav>
+
+    <div class="inner-body">
+      <div class="page-inner">
+        <div class="title">
+          <h1 class="page-title">Submit Report</h1>
+        </div>
+
+        <div class="company-details">
+            <div class="company-logo">
+                <img src="../../assets/logo/Project Vishnu 3.png" alt="">
+            </div>
+
+            <form action="#" class="report-submit-form">
+
+                <div class="form">
+                    <div class="field">
+                        <div class="field-title">
+                            <p>Info</p>
+                        </div>
+                        <div class="text">
+                            <p>Write a title so we know what this vulnerability is about</p>
+                        </div>
+                        <div class="input">
+                            <input type="text" placeholder="Heading of report" name="title" required>
+                        </div>
+                    </div>
+    
+                    <div class="field">
+                        <div class="field-title">
+                            <p>Target</p>
+                        </div>
+                        <div class="text">
+                            <p>What is the target of this vulnerability?</p>
+                        </div>
+                        <div class="input">
+                           <!-- options -->
+                              <select name="target" id="target" required>
+                                <option value="-1" selected disabled hidden>Select Target</option>
+                                <option value="website1">www.google.com</option>
+                                <option value="website2">www.facebook.com</option>
+                                <option value="website3">www.instagram.com</option>
+                              </select>
+                        </div>
+                    </div>
+    
+                    <div class="field">
+                        <div class="field-title">
+                            <p>Severity</p>
+                        </div>
+                        <div class="text">
+                            <p>How severe is this vulnerability?</p>
+                        </div>
+                        <div class="input">
+                           <!-- options -->
+                              <select name="severity" id="severity" required>
+                                <option value="-1" selected disabled hidden>Select Severity</option>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                              </select>
+                        </div>
+                    </div>
+    
+                    <div class="field">
+                        <div class="field-title">
+                            <p>Proof of Concept</p>
+                        </div>
+                        <div class="text">
+                            <p>Type of vulnerability</p>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="type" placeholder="Type of Vulnerability" required>
+                        </div>
+                        <div class="text">
+                            <p>URL of vulnerability</p>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="url" placeholder="URL of Vulnerability" required>
+                        </div>
+                        <div class="text">
+                            <p>Description</p>
+                        </div>
+                        <div class="input">
+                            <textarea name="description" id="description" cols="30" rows="10" placeholder="Description of Vulnerability"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="field-title">
+                            <p>Attachments</p>
+                        </div>
+                        <div class="text">
+                            <p>Upload screenshots, or any other files that can help us understand the vulnerability better (under 5 MB)</p>
+                        </div>
+                        <div class="input">
+                            <input type="file" name="file" id="file">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="field-title">
+                            <p>Terms and Conditions</p>
+                        </div>
+                        <div class="text">
+                            <p>Terms and Conditions apply</p>
+                        </div>
+                        <div class="checkbox">
+                           <div class="same-line">
+                            <input type="checkbox" name="terms" id="terms" required checked>
+                            <label for="terms">I agree to the <a href="#">terms and conditions</a>.</label>
+                           </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="field-title">
+                            <p>Submit</p>
+                        </div>
+                        <div class="text">
+                            <p>Submit your report</p>
+                        </div>
+                        <div class="input">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        
+      </div>
+    </div>
+
+    <footer>
+      <span>Copyright &copy; 2023 Trideva</span>
+      <div class="footer-links">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Support</a>
+        <a href="#">Contact</a>
+      </div>
+    </footer>
+  </body>
+</html>
