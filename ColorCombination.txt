@@ -1,0 +1,17 @@
+Primary Color: Dark Blue (#1E2A3A)
+Represents trust, security, and professionalism. It sets a strong foundation for the platform's branding.
+
+Secondary Color: Green (#34D399)
+Symbolizes growth, prosperity, and safety. It reflects the rewards and positive outcomes for successful bug bounty hunters.
+
+Alert Color: Red (#FF4136)
+Represents danger and urgency. It draws attention to critical alerts or security issues that need immediate action.
+
+Neutral Background: White (#FFFFFF)
+Provides simplicity, cleanliness, and a sense of spaciousness. It helps make other colors stand out and enhances readability.
+
+Neutral Text: Grey (#808080)
+Offers a balanced and sophisticated text color that complements the primary and secondary colors.
+
+Text Font style
+font-family: 'VT323', sans-serif;
